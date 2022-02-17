@@ -21,7 +21,7 @@ def main(args):
             # data structures (not NumPy, which is not suitable for incremental
             # addition and string mapping).
             data_count[line] = 1 if data_count.get(line) == None else data_count[line] + 1
-
+    print(data_count)
     # TODO: Create a NumPy array containing the data distribution. The
     # NumPy array should contain only data, not any mapping. Alternatively,
     # the NumPy array might be created after loading the model distribution.
