@@ -7,7 +7,7 @@ os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by d
 import numpy as np
 import tensorflow as tf
 
-from A2_pca_first.mnist import MNIST
+from mnist import MNIST
 
 # Parse arguments
 parser = argparse.ArgumentParser()
@@ -52,7 +52,7 @@ def main(args: argparse.Namespace) -> None:
     model.evaluate(
         mnist.test.data["images"], mnist.test.data["labels"], batch_size=args.batch_size,
     )
-
+    model.e
 
 if __name__ == "__main__":
     args = parser.parse_args([] if "__file__" not in globals() else None)
